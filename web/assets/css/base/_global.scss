@@ -1,0 +1,15 @@
+a {
+  color: $green-light;
+}
+body {
+  background-color: $main-background-color;
+  padding-top: 76px !important;
+}
+
+/**
+ * Hack to avoid 17px padding-right on <body> when opening a modal (Bootstrap)
+ * @see http://stackoverflow.com/questions/19337238/twitter-bootstrap-modal-pushes-html-content-to-the-left
+ */
+// html { overflow: hidden; height: 100%; }
+// body { overflow: auto; height: 100%; }
+// .modal-open { overflow: auto; }

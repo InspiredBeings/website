@@ -1,0 +1,56 @@
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Global...............Globally-available variables and config.
+ *
+ * TOOLS
+ * Mixins...............Useful mixins.
+ *
+ * GENERIC
+ * Normalize.css........A level playing field.
+ * Box-sizing...........Better default `box-sizing`.
+ *
+ * BASE
+ * Headings.............H1–H6 styles.
+ *
+ * OBJECTS
+ * Wrappers.............Wrapping and constraining elements.
+ *
+ * COMPONENTS
+ * Page-head............The main page header.
+ * Page-foot............The main page footer.
+ * Buttons..............Button elements.
+ *
+ * TRUMPS
+ * Text.................Text helpers.
+ */
+
+// Utils
+@import 'utils/_variables.scss';
+
+// Themes
+@import 'themes/_theme.scss';
+
+// Base
+@import 'base/palas.scss';
+@import 'base/global.scss';
+
+// Layout
+@import 'layout/Footer.scss';
+@import 'layout/Header.scss';
+@import 'layout/Main.scss';
+@import 'layout/Top.scss';
+
+// Module
+@import 'module/MainService.scss';
+@import 'module/MainSidebar.scss';
+@import 'module/MainBottom.scss';
+@import 'module/ModalCallback.scss';
+@import 'module/FooterContact.scss';
+@import 'module/FooterCopyright.scss';
+@import 'module/FooterLinks.scss';
+
+// Pages
+@import 'pages/Application.scss';
+@import 'pages/Contact.scss';
