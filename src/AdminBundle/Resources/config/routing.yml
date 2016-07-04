@@ -1,0 +1,6 @@
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+admin_home:
+    path:     /
+    defaults: { _controller: AdminBundle:Dashboard:index }
