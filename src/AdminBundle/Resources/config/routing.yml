@@ -1,6 +1,52 @@
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
-admin_home:
+dahsboard:
     path:     /
     defaults: { _controller: AdminBundle:Dashboard:index }
+
+posts:
+    path:     /posts
+    defaults:
+        _controller: AdminBundle:Post:index
+        isPage: false
+        orderBy: username
+        orderDesc: false
+
+post_add:
+    path:     /post/add
+    defaults: { _controller: AdminBundle:Post:add, isPage: false }
+    methods:  [GET, POST]
+
+post_edit:
+    path:     /post/{postId}
+    defaults: { _controller: AdminBundle:Post:add }
+    methods:  [GET, POST]
+
+post_delete:
+    path:     /post/{postId}/delete
+    defaults: { _controller: AdminBundle:Post:add }
+    methods:  [GET, POST]
+
+users:
+    path:     /users
+    defaults:
+        _controller: AdminBundle:User:index
+        isPage: false
+        orderBy: username
+        orderDesc: false
+
+user_add:
+    path:     /user/add
+    defaults: { _controller: AdminBundle:User:add, isPage: false }
+    methods:  [GET, POST]
+
+user_edit:
+    path:     /user/{userId}
+    defaults: { _controller: AdminBundle:User:add }
+    methods:  [GET, POST]
+
+user_delete:
+    path:     /user/{userId}/delete
+    defaults: { _controller: AdminBundle:User:add }
+    methods:  [GET, POST]

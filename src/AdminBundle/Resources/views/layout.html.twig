@@ -1,14 +1,14 @@
-{% set brand = 'Inspired Beings Administration' %}
+{% set brand = 'Inspired Beings' %}
 {% set route = app.request.attributes.get('_route') %}
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{{ head_title ~ ' ▪ ' ~ brand }}</title>
-    <meta name="description" content="{{ meta_description }}">
 
     <!-- <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('/images/icons/apple-icon-76x76.png') }}">
     <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('/images/icons/apple-icon-72x72.png') }}">
@@ -29,15 +29,15 @@
     <meta name="theme-color" content="#20b44c"> -->
 
     {% block stylesheets %}
-      <!-- <link rel="stylesheet" href="{{ asset('//fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,600,700,900,400italic|Montserrat:400,700') }}">
-      <link rel="stylesheet" href="{{ asset('dist/' ~ dist_web_css) }}"> -->
+      <!-- <link rel="stylesheet" href="{{ asset('//fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,600,700,900,400italic|Montserrat:400,700') }}"> -->
+      <link rel="stylesheet" href="{{ asset('dist/' ~ assets_fingerprint ~ '/admin.min.css') }}">
     {% endblock %}
   </head>
   <body>
     {% block body %}
-      <div id="wrapper">
-        {#% include('WebBundle:Layout:header.html.twig') %#}
+      {% include('AdminBundle:partials:nav.html.twig') %}
 
+      <div class="container-fluid">
         {% block content %}{% endblock %}
       </div>
 
@@ -45,7 +45,11 @@
     {% endblock %}
 
     {% block javascripts %}
-      <script src="{{ asset('dist/' ~ dist_web_js) }}"></script>
+      {% if app.environment == 'dev' %}
+        <script src="http://localhost:35729/livereload.js?snipver=1"></script>
+      {% endif %}
+
+      <script src="{{ asset('dist/' ~ assets_fingerprint ~ '/admin.min.js') }}"></script>
 
       {# <script src="https://www.google.com/recaptcha/api.js" async></script> #}
     {% endblock %}

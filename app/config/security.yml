@@ -19,6 +19,7 @@ security:
             pattern: ^/
             form_login:
                 login_path: /admin/login
+                check_path: /admin/login_check
                 provider: fos_userbundle
                 csrf_token_generator: security.csrf.token_manager
             logout:

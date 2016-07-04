@@ -4,8 +4,7 @@ imports:
 
 twig:
     globals:
-        dist_web_css: 'dev/web.css'
-        dist_web_js: 'dev/web.js'
+        assets_fingerprint: '../dev'
 
 framework:
     router:

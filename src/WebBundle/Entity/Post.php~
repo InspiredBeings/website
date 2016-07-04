@@ -43,18 +43,25 @@ class Post
     private $content;
 
     /**
-     * @var string
+     * @var boolean
      *
-     * @ORM\Column(name="isPublished", type="text")
+     * @ORM\Column(name="isPublished", type="boolean")
      */
     private $isPublished;
 
     /**
-     * @var string
+     * @var boolean
      *
-     * @ORM\Column(name="isArchived", type="text")
+     * @ORM\Column(name="isArchived", type="boolean")
      */
     private $isArchived;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="isPage", type="boolean")
+     */
+    private $isPage;
 
     /**
      * @var \DateTime
@@ -203,5 +210,53 @@ class Post
     public function getUpdatedAt()
     {
         return $this->updatedAt;
+    }
+
+    /**
+     * Set isPublished
+     *
+     * @param string $isPublished
+     *
+     * @return Post
+     */
+    public function setIsPublished($isPublished)
+    {
+        $this->isPublished = $isPublished;
+
+        return $this;
+    }
+
+    /**
+     * Get isPublished
+     *
+     * @return string
+     */
+    public function getIsPublished()
+    {
+        return $this->isPublished;
+    }
+
+    /**
+     * Set isArchived
+     *
+     * @param string $isArchived
+     *
+     * @return Post
+     */
+    public function setIsArchived($isArchived)
+    {
+        $this->isArchived = $isArchived;
+
+        return $this;
+    }
+
+    /**
+     * Get isArchived
+     *
+     * @return string
+     */
+    public function getIsArchived()
+    {
+        return $this->isArchived;
     }
 }

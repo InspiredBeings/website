@@ -43,18 +43,25 @@ class Post
     private $content;
 
     /**
-     * @var string
+     * @var boolean
      *
-     * @ORM\Column(name="isPublished", type="text")
+     * @ORM\Column(name="isPublished", type="boolean")
      */
     private $isPublished;
 
     /**
-     * @var string
+     * @var boolean
      *
-     * @ORM\Column(name="isArchived", type="text")
+     * @ORM\Column(name="isArchived", type="boolean")
      */
     private $isArchived;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="isPage", type="boolean")
+     */
+    private $isPage;
 
     /**
      * @var \DateTime
@@ -69,11 +76,6 @@ class Post
      * @ORM\Column(name="updatedAt", type="datetimetz", nullable=true)
      */
     private $updatedAt;
-
-    public function __construct()
-    {
-
-    }
 
     /**
      * Get id
@@ -251,5 +253,29 @@ class Post
     public function getIsArchived()
     {
         return $this->isArchived;
+    }
+
+    /**
+     * Set isPage
+     *
+     * @param boolean $isPage
+     *
+     * @return Post
+     */
+    public function setIsPage($isPage)
+    {
+        $this->isPage = $isPage;
+
+        return $this;
+    }
+
+    /**
+     * Get isPage
+     *
+     * @return boolean
+     */
+    public function getIsPage()
+    {
+        return $this->isPage;
     }
 }

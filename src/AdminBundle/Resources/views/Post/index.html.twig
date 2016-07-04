@@ -1,0 +1,35 @@
+{% set head_title = isPage ? 'Pages' : 'Articles' %}
+
+{% extends 'AdminBundle::layout.html.twig' %}
+
+{% block content %}
+  <p class="text-right">
+    <a href="{{ path('post_add', {'isPage': isPage}) }} type="button" class="btn btn-default">
+      <i class="fa fa-fw fa-plus"></i>
+      New {{ isPage ? 'Page' : 'Article' }}
+    </a>
+  </p>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% if entities %}
+        {% for post in entities %}
+          <tr>
+            <th scope="row">1</th>
+            <td>{{ post.title }}</td>
+          </tr>
+        {% endfor %}
+      {% else %}
+        <tr>
+          <td colspan="2">No data.</th>
+        </tr>
+      {% endif %}
+    </tbody>
+  </table>
+{% endblock %}

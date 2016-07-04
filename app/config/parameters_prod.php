@@ -13,3 +13,5 @@ $container->setParameter('mailer_transport', 'smtp');
 $container->setParameter('mailer_host', '127.0.0.1');
 $container->setParameter('mailer_user', null);
 $container->setParameter('mailer_password', null);
+
+$container->setParameter('assets_fingerprint', 'ef19c774-134f-42aa-aa42-8cc04337fcc8');
