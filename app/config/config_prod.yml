@@ -20,3 +20,7 @@ monolog:
             level: debug
         console:
             type:  console
+
+twig:
+    globals:
+        assets_fingerprint: '%assets_fingerprint%'
