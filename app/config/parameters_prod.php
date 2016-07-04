@@ -9,3 +9,7 @@ $container->setParameter('database_password', $jawsDb['pass']);
 $container->setParameter('database_port', 3306);
 $container->setParameter('database_user', $jawsDb['user']);
 $container->setParameter('secret', getenv('SYMFONY_SECRET'));
+$container->setParameter('mailer_transport', 'smtp');
+$container->setParameter('mailer_host', '127.0.0.1');
+$container->setParameter('mailer_user', null);
+$container->setParameter('mailer_password', null);
