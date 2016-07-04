@@ -30,7 +30,7 @@
 
     {% block stylesheets %}
       <!-- <link rel="stylesheet" href="{{ asset('//fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,600,700,900,400italic|Montserrat:400,700') }}"> -->
-      <link rel="stylesheet" href="{{ asset('dist/' ~ assets_fingerprint ~ '/admin.min.css') }}">
+      <link rel="stylesheet" href="{{ asset('dist/' ~ assets_fingerprint ~ '/css/admin.min.css') }}">
     {% endblock %}
   </head>
   <body>
@@ -49,7 +49,7 @@
         <script src="http://localhost:35729/livereload.js?snipver=1"></script>
       {% endif %}
 
-      <script src="{{ asset('dist/' ~ assets_fingerprint ~ '/admin.min.js') }}"></script>
+      <script src="{{ asset('dist/' ~ assets_fingerprint ~ '/js/admin.min.js') }}"></script>
 
       {# <script src="https://www.google.com/recaptcha/api.js" async></script> #}
     {% endblock %}
