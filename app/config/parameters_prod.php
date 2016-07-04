@@ -1,6 +1,6 @@
 <?php
 
-$jawsDb = parse_url(getenv('JAWSDB_URL'));
+$jawsDb = parse_url(getenv('JAWSDB_MARIA_URL'));
 
 $container->setParameter('database_driver', 'pdo_mysql');
 $container->setParameter('database_host', $jawsDb['host']);
