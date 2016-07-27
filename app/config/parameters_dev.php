@@ -11,3 +11,5 @@ $container->setParameter('mailer_password', null);
 $container->setParameter('mailer_transport', 'smtp');
 $container->setParameter('mailer_user', null);
 $container->setParameter('secret', 'ThisTokenIsNotSoSecretChangeIt');
+
+$container->setParameter('assets_fingerprint', null);

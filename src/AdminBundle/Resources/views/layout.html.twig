@@ -29,8 +29,11 @@
     <meta name="theme-color" content="#20b44c"> -->
 
     {% block stylesheets %}
-      <!-- <link rel="stylesheet" href="{{ asset('//fonts.googleapis.com/css?family=Source+Sans+Pro:100,300,400,600,700,900,400italic|Montserrat:400,700') }}"> -->
-      <link rel="stylesheet" href="{{ asset('dist/' ~ assets_fingerprint ~ '/css/admin.min.css') }}">
+      {% if app.environment == 'dev' %}
+        <link rel="stylesheet" href="{{ asset('assets/css/admin.css') }}">
+      {% else %}
+        <link rel="stylesheet" href="{{ asset('dist/' ~ assets_fingerprint ~ '/css/admin.min.css') }}">
+      {% endif %}
     {% endblock %}
   </head>
   <body>
@@ -47,9 +50,11 @@
     {% block javascripts %}
       {% if app.environment == 'dev' %}
         <script src="http://localhost:35729/livereload.js?snipver=1"></script>
+        <script src="{{ asset('assets/js/admin.js') }}"></script>
+      {% else %}
+        <script src="{{ asset('dist/' ~ assets_fingerprint ~ '/js/admin.min.js') }}"></script>
       {% endif %}
 
-      <script src="{{ asset('dist/' ~ assets_fingerprint ~ '/js/admin.min.js') }}"></script>
 
       {# <script src="https://www.google.com/recaptcha/api.js" async></script> #}
     {% endblock %}

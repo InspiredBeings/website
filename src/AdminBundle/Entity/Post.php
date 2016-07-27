@@ -1,6 +1,6 @@
 <?php
 
-namespace WebBundle\Entity;
+namespace AdminBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Post
  *
  * @ORM\Table(name="posts")
- * @ORM\Entity(repositoryClass="WebBundle\Repository\PostRepository")
+ * @ORM\Entity(repositoryClass="AdminBundle\Repository\PostRepository")
  */
 class Post
 {

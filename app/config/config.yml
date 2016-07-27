@@ -38,6 +38,7 @@ twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
     globals:
+        assets_fingerprint: "%assets_fingerprint%"
         locale: "%locale%"
 
 # Doctrine Configuration
@@ -74,4 +75,4 @@ swiftmailer:
 fos_user:
     db_driver: orm
     firewall_name: main
-    user_class: WebBundle\Entity\User
+    user_class: AdminBundle\Entity\User

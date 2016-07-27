@@ -2,10 +2,6 @@ imports:
     - { resource: parameters_dev.php }
     - { resource: config.yml }
 
-twig:
-    globals:
-        assets_fingerprint: '../dev'
-
 framework:
     router:
         resource: "%kernel.root_dir%/config/routing_dev.yml"

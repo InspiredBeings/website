@@ -1,35 +1,15 @@
-{% set head_title = isPage ? 'Pages' : 'Articles' %}
+{% use 'bootstrap_3_horizontal_layout.html.twig' %}
+
+{% set head_title = (postId ? 'Edit' : 'New') ~ (isPage ? ' page' : ' article') %}
+
+{% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
 
 {% extends 'AdminBundle::layout.html.twig' %}
 
 {% block content %}
-  <p class="text-right">
-    <a href="{{ path('post_add', {'isPage': isPage}) }} type="button" class="btn btn-default">
-      <i class="fa fa-fw fa-plus"></i>
-      New {{ isPage ? 'Page' : 'Article' }}
-    </a>
-  </p>
+  <h1 class="page-header">{{ head_title }}</h1>
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Title</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% if entities %}
-        {% for post in entities %}
-          <tr>
-            <th scope="row">1</th>
-            <td>{{ post.title }}</td>
-          </tr>
-        {% endfor %}
-      {% else %}
-        <tr>
-          <td colspan="2">No data.</th>
-        </tr>
-      {% endif %}
-    </tbody>
-  </table>
+  {{ form_start(form) }}
+    {{ form_widget(form) }}
+  {{ form_end(form) }}
 {% endblock %}

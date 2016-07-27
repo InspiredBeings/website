@@ -24,7 +24,7 @@
     "babel-preset-es2015": "^6.9.0",
     "babelify": "^7.3.0",
     "bootstrap": "^3.3.6",
-    "bootstrap-without-jquery": "^0.7.0",
+    "bootstrap-without-jquery": "^1.0.4",
     "bootswatch": "^3.3.6",
     "font-awesome": "^4.6.3",
     "grunt": "^1.0.1",

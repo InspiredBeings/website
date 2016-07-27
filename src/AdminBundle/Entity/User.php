@@ -1,6 +1,6 @@
 <?php
 
-namespace WebBundle\Entity;
+namespace AdminBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  * User
  *
  * @ORM\Table(name="users")
- * @ORM\Entity(repositoryClass="WebBundle\Repository\UserRepository")
+ * @ORM\Entity(repositoryClass="AdminBundle\Repository\UserRepository")
  */
 class User extends BaseUser
 {

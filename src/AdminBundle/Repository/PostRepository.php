@@ -1,6 +1,6 @@
 <?php
 
-namespace WebBundle\Repository;
+namespace AdminBundle\Repository;
 
 /**
  * PostRepository
