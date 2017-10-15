@@ -12,4 +12,6 @@ const lexpress = new Lexpress({
   routes,
 })
 
+console.log(process.env.PORT)
+
 lexpress.start()
