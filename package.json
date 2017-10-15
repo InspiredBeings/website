@@ -1,7 +1,7 @@
 {
   "name": "inspiredbeings-website",
   "private": true,
-  "version": "1.0.1-4",
+  "version": "1.0.1-5",
   "license": "UNLICENSED",
   "description": "Inspired Beings Website.",
   "main": "build/index.js",
