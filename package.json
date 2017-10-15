@@ -21,10 +21,8 @@
     "url": "https://www.inspired-beings.com"
   },
   "dependencies": {
+    "clean-webpack-plugin": "^0.1.17",
     "lexpress": "^0.8.0"
-  },
-  "devDependencies": {
-    "clean-webpack-plugin": "^0.1.17"
   },
   "bugs": {
     "url": "https://github.com/ivangabriele/inspiredbeings-website/issues"
