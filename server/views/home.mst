@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Inspired Beings</title>
+    <meta name="description" content="">
+    <meta name="base-url" content="{{ baseUrl }}">
+    <!-- <link rel="icon" href="images/logos/favicon.png"> -->
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700');
+
+      html, body {
+        /*background-color: #f4f7fa;*/
+        background-color: #0d141d;
+        height: 100%;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 16px;
+        margin: 0;
+      }
+      .container {
+        height: 100%;
+      }
+      /*
+        Complementary
+        #926600
+        #FFB919
+        #003092
+        #0048DF
+        > #DF9B00
+      */
+    </style>
+  </head>
+  <body>
+
+  </body>
+</html>

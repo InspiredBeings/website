@@ -1,43 +1,40 @@
 {
   "name": "inspiredbeings-website",
+  "private": true,
   "version": "1.0.0",
-  "description": "Symfony Standard Edition ========================",
-  "main": "index.js",
-  "directories": {
-    "test": "tests"
-  },
+  "license": "UNLICENSED",
+  "description": "Inspired Beings Website.",
+  "main": "build/index.js",
   "scripts": {
+    "build": "webpack --display-error-details",
+    "start": "npm run build && node ./build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Inspired Beings EURL",
+    "email": "contact@inspired-beings.com",
+    "url": "https://www.inspired-beings.com"
+  },
+  "dependencies": {
+    "lexpress": "^0.6.5"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.17"
+  },
+  "bugs": {
+    "url": "https://github.com/ivangabriele/inspiredbeings-website/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ivangabriele/inspiredbeings-website.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ivangabriele/inspiredbeings-website/issues"
-  },
-  "homepage": "https://github.com/ivangabriele/inspiredbeings-website#readme",
-  "devDependencies": {
-    "babel-preset-es2015": "^6.9.0",
-    "babelify": "^7.3.0",
-    "bootstrap": "^3.3.6",
-    "bootstrap-without-jquery": "^1.0.4",
-    "bootswatch": "^3.3.6",
-    "font-awesome": "^4.6.3",
-    "grunt": "^1.0.1",
-    "grunt-browserify": "^5.0.0",
-    "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^1.0.1",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-uglify": "^1.0.1",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-githooks": "^0.6.0",
-    "grunt-replace": "^1.0.1",
-    "node-uuid": "^1.4.7"
-  }
+  "homepage": "https://www.inspired-beings.com",
+  "contributors": [
+    {
+      "name": "Ivan Gabriele",
+      "email": "ivan.gabriele@gmail.com",
+      "url": "https://www.ivangabriele.com"
+    }
+  ]
 }
