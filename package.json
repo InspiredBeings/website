@@ -20,7 +20,7 @@
     "url": "https://www.inspired-beings.com"
   },
   "dependencies": {
-    "lexpress": "^0.6.5"
+    "lexpress": "^0.8.0"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.17"
